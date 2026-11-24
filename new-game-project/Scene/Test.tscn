@@ -3,6 +3,7 @@
 [ext_resource type="SpriteFrames" uid="uid://c50i1ll6cyxey" path="res://Assets/player_sprite_frames.tres" id="1_3wv3v"]
 [ext_resource type="TileSet" uid="uid://bi81rc4hkfkks" path="res://Scene/TesMap.tres" id="3_i8xqr"]
 [ext_resource type="Script" uid="uid://dn67wdctexwt5" path="res://Script/animated_sprite_2d.gd" id="3_id8a5"]
+[ext_resource type="Texture2D" uid="uid://vfk8a1cabkh3" path="res://Assets/PointLight.png" id="4_i8xqr"]
 
 [node name="Node2D" type="Node2D" unique_id=1536980637]
 
@@ -20,3 +21,10 @@ animation = &"shoot"
 script = ExtResource("3_id8a5")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=774588653]
+
+[node name="PointLight2D" type="PointLight2D" parent="Player" unique_id=2024209006]
+energy = 0.7
+texture = ExtResource("4_i8xqr")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=829427293]
+color = Color(0.083687745, 0.07312781, 0.1443398, 1)
