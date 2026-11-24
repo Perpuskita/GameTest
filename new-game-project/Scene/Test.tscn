@@ -1,0 +1,22 @@
+[gd_scene format=4 uid="uid://bvmd5bunnhamw"]
+
+[ext_resource type="SpriteFrames" uid="uid://c50i1ll6cyxey" path="res://Assets/player_sprite_frames.tres" id="1_3wv3v"]
+[ext_resource type="TileSet" uid="uid://bi81rc4hkfkks" path="res://Scene/TesMap.tres" id="3_i8xqr"]
+[ext_resource type="Script" uid="uid://dn67wdctexwt5" path="res://Script/animated_sprite_2d.gd" id="3_id8a5"]
+
+[node name="Node2D" type="Node2D" unique_id=1536980637]
+
+[node name="TileMap" type="Node2D" parent="." unique_id=2021126411]
+
+[node name="Layer0" type="TileMapLayer" parent="TileMap" unique_id=1623071954]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAEAAAAAAAIAAQAAAAIAAAAAAAMAAQAAAAMAAAAAAAQAAQAAAAQAAAAAAAUAAQAAAAUAAAABAAAAAQABAAAAAAABAAEAAQABAAEAAAABAAIAAQABAAIAAAABAAMAAQABAAMAAAABAAQAAQABAAQAAAABAAUAAQABAAUAAAACAAAAAQACAAAAAAACAAEAAQACAAEAAAACAAIAAQACAAIAAAACAAMAAQACAAMAAAACAAQAAQACAAQAAAACAAUAAQACAAUAAAADAAAAAQADAAAAAAADAAEAAQADAAEAAAADAAIAAQADAAIAAAADAAMAAQADAAMAAAADAAQAAQADAAQAAAADAAUAAQADAAUAAAA=")
+tile_set = ExtResource("3_i8xqr")
+rendering_quadrant_size = 50
+
+[node name="Player" type="AnimatedSprite2D" parent="." unique_id=554093825]
+sprite_frames = ExtResource("1_3wv3v")
+animation = &"shoot"
+script = ExtResource("3_id8a5")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=774588653]
